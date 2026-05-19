@@ -14,13 +14,12 @@ export function ServiceCard({ title, desc, href = "/" }: ServiceCardProps) {
 
   return (
     <div
-      className="relative flex flex-col bg-background border border-foreground/8 p-7 overflow-hidden group cursor-pointer"
+      className="relative flex flex-col bg-background border border-foreground/8 p-7 overflow-hidden group cursor-pointer transition-transform duration-300 ease-out hover:-translate-y-2"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-
       {/* Icon */}
-      <div className="w-10 h-10 rounded-xl bg-[#f6f7f9] flex items-center justify-center overflow-hidden transition-all duration-300">
+      <div className="w-10 h-10 flex items-center justify-center overflow-hidden transition-all duration-300">
         <Image
           src="/icon-zaga.png"
           alt="ZAG Rwanda"

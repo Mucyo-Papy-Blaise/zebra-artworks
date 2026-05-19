@@ -85,7 +85,7 @@ export default function LatestConstruction() {
         <div>
           <p className="landing-eyebrow">Our work</p>
           <h2 className="landing-title">
-            Architecture & Build
+            Architecture & Construction
           </h2>
           <div className="landing-rule" />
         </div>

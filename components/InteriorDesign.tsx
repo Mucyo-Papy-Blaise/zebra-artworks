@@ -110,7 +110,7 @@ export default function LatestDesigns() {
       >
         <div>
           <p className="landing-eyebrow">OUR WORK</p>
-          <h2 className="landing-title">Interior Trends</h2>
+          <h2 className="landing-title">Interior Designs</h2>
           <div className="landing-rule-small" />
         </div>
         <Link href="/interior-design" className="landing-link">
