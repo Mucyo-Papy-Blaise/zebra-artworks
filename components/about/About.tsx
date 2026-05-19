@@ -122,7 +122,7 @@ export default function AboutPage() {
           transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           className={`relative z-10 ${container} pt-28 pb-12`}
         >
-          <p className="landing-eyebrow mb-4">Our work</p>
+          <p className="text-xs lowercase text-white/80 mb-2">zagarwanda</p>
 
           <h1 className="mb-5 text-type-hero-mega font-bold leading-[1.05]">
             <span className="text-white">ZEBRA ARTWORK </span>

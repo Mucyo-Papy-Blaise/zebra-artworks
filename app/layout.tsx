@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "ZAG Rwanda",
   description: "Construction, Interior Design & Architecture Company",
   icons:{
-    icon:'/bg-logo-zaga.png'
+    icon:'/icon-zaga.png'
   }
 };
 
