@@ -77,6 +77,7 @@
     font-family: var(--font-sans), system-ui, sans-serif;
     font-weight: 400;
     @apply text-type-prose antialiased;
+    overflow-x: hidden;
   }
 
   h1,

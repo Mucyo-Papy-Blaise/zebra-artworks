@@ -122,7 +122,7 @@ export default function AboutPage() {
           transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           className={`relative z-10 ${container} pt-28 pb-12`}
         >
-          <p className="text-xs lowercase text-white/80 mb-2">zagarwanda</p>
+          <p className="text-xs text-white/80 mb-2">ZAG Rwanda</p>
 
           <h1 className="mb-5 text-type-hero-mega font-bold leading-[1.05]">
             <span className="text-white">ZEBRA ARTWORK </span>
@@ -142,23 +142,20 @@ export default function AboutPage() {
 
       {/* ── Stats strip ───────────────────────────────────────────────────── */}
       <section className="bg-background border-y border-line/20">
-        <div className={container}>
-          <div className="grid grid-cols-2 md:grid-cols-3 divide-x divide-y md:divide-y-0 divide-line/20">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex flex-col items-center justify-center py-8 px-4 text-center"
-              >
-                <span className="mb-1.5 text-type-h2 font-black leading-none text-primary">
-                  {stat.value}
-                </span>
-                <span className="text-type-eyebrow font-medium uppercase tracking-wide text-gray-mid">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
+          <div className={container}>
+            <div className="flex flex-row items-center justify-between py-6 px-2 gap-6">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col items-center">
+                  <span className="mb-2 text-type-h3 sm:text-type-h2 font-black leading-none text-primary">
+                    {stat.value}
+                  </span>
+                  <span className="text-type-eyebrow text-[0.72rem] sm:text-type-eyebrow font-medium uppercase tracking-wide text-gray-mid">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
       </section>
 
       {/* ── Our Story ─────────────────────────────────────────────────────── */}
@@ -291,23 +288,23 @@ export default function AboutPage() {
 
       {/* ── Core Values ───────────────────────────────────────────────────── */}
       <section className={`${sectionPy} bg-background`}>
-        <div className={container}>
-          <div className="text-center mb-14">
-            <p className="landing-eyebrow">What guides us</p>
-            <h2 className="text-foreground">Our Core Values</h2>
-            <p className="mt-3 mx-auto max-w-md text-type-prose-sm text-gray-mid">
-              The principles that guide everything we do
-            </p>
-          </div>
+          <div className={container}>
+            <div className="text-left mb-14">
+              <p className="landing-eyebrow">What guides us</p>
+              <h2 className="text-foreground">Our Core Values</h2>
+              <p className="mt-3 max-w-md text-type-prose-sm text-gray-mid">
+                The principles that guide everything we do
+              </p>
+            </div>
 
-          <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-3 gap-6">
             {values.map((value) => {
               const Icon = value.icon;
               return (
-                <div
-                  key={value.title}
-                  className="group relative bg-subtle border border-line/20 p-8 hover:border-primary/30 hover:shadow-lg transition-all duration-300 overflow-hidden"
-                >
+                    <div
+                      key={value.title}
+                      className="group relative bg-subtle border border-line/20 p-8 hover:border-primary/30 hover:shadow-lg transition-all duration-300 overflow-hidden text-left"
+                    >
                   <div
                     className="absolute -top-10 -right-10 w-32 h-32 rounded-full opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500 pointer-events-none"
                     style={{ background: value.accent }}

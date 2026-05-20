@@ -82,8 +82,29 @@ function NewsCard({
               transition: "transform 0.45s",
             }}
           />
+          {/* Mobile: show info under image like secondary cards */}
+          <div className="block md:hidden border-b border-foreground/8 px-0 py-4">
+            <div className="mb-2 flex items-center justify-between gap-4">
+              <p className="text-type-eyebrow font-medium uppercase tracking-widest text-primary">
+                {item.tag}
+              </p>
+              <p className="text-type-eyebrow font-medium uppercase tracking-widest text-gray-mid">
+                {formatDate(item.date)}
+              </p>
+            </div>
+
+            <h3 className="mb-2 text-type-h5 leading-snug text-foreground transition-colors">
+              {item.title}
+            </h3>
+
+            <p className="line-clamp-2 text-type-prose-sm leading-relaxed text-gray-mid">
+              {item.excerpt}
+            </p>
+          </div>
+
+          {/* Desktop: keep the overlay effect */}
           <div
-            className="absolute bottom-0 left-0 right-0 px-6 sm:px-10 pb-8 pt-24"
+            className="hidden md:block absolute bottom-0 left-0 right-0 px-6 sm:px-10 pb-8 pt-24"
             style={{
               background:
                 "linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%)",
@@ -252,7 +273,7 @@ export default function NewsPage() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-          className="relative z-10 mx-auto w-full max-w-6xl pt-10 pb-12"
+          className="relative z-10 mx-auto w-full max-w-6xl px-5 pt-10 pb-12 sm:px-8"
         >
           <h1
             className="mb-4 text-type-hero-mega font-bold leading-[1.05] text-white uppercase"
@@ -265,7 +286,8 @@ export default function NewsPage() {
         </motion.div>
       </section>
 
-      <section className="mx-auto max-w-6xl py-12 sm:py-20">
+      <section className="landing-section bg-background">
+        <div className="landing-container">
         {error ? (
           <div className="rounded-2xl border border-red-200 bg-red-50 px-6 py-5 text-type-prose-sm text-red-700">
             {error}
@@ -299,6 +321,7 @@ export default function NewsPage() {
                 ))}
           </div>
         )}
+        </div>
       </section>
     </main>
   );

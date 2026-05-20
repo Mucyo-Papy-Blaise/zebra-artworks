@@ -59,12 +59,12 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-8">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between md:gap-64 gap-8">
           {/* ── LEFT: Logo ── */}
-          <div className="shrink-0">
+          <div className="shrink-0 flex justify-start">
             <Link
               href="/"
               className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-200"
             >
-              <div className="relative w-28 h-28 shrink-0">
+              <div className="relative w-20 h-20 md:w-28 md:h-28 shrink-0">
                 <Image
                   src="/sebra.png"
                   alt="ZAG Rwanda logo"
@@ -72,21 +72,21 @@ export default function Footer() {
                   className="object-contain brightness-0 invert"
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="text-white text-lg font-bold tracking-tight leading-tight">
+              <div className="flex flex-col text-left">
+                <span className="text-white text-base md:text-lg font-bold tracking-tight leading-tight">
                   ZAG Rwanda
                 </span>
                 <span className="text-white/40 text-[0.45rem] tracking-widest uppercase">
-                  Design · Build
+                  The Best Choice
                 </span>
               </div>
             </Link>
           </div>
 
           {/* ── RIGHT: Nav + Contact + Socials ── */}
-          <div className="flex flex-col gap-5 flex-1">
+          <div className="flex flex-col gap-5 flex-1 text-left">
             {/* Nav links row */}
-            <nav className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 justify-start">
               {pageLinks.map(({ label, href }) => (
                 <Link
                   key={label}
@@ -100,7 +100,7 @@ export default function Footer() {
 
             {/* Contact info + Socials underneath */}
             <div className="flex flex-col gap-7">
-              <div className="flex items-center gap-10">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-10">
                 <div className="flex items-start gap-2 text-xs text-white/40">
                   <MapPin className="size-3.5 shrink-0 mt-0.5 text-primary/50" />
                   <span>{ZAG_ADDRESS}</span>
@@ -122,9 +122,9 @@ export default function Footer() {
               </div>
 
               {/* Socials — directly under contact */}
-              <div className="flex flex-row gap-4 mt-1">
+              <div className="flex flex-col md:flex-row md:gap-8 gap-3 mt-1 justify-start">
                 <div className="flex items-center gap-2">
-                  <span className="text-[0.55rem] uppercase tracking-widest text-primary/50 font-semibold w-12 shrink-0">
+                  <span className="text-[0.55rem] uppercase tracking-widest text-primary/50 font-semibold w-fit shrink-0 text-left">
                     Interior
                   </span>
                   <div className="flex gap-1.5">
@@ -144,8 +144,8 @@ export default function Footer() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <span className="text-[0.55rem] uppercase tracking-widest text-primary/50 font-semibold w-12 shrink-0">
-                    Build
+                  <span className="text-[0.55rem] uppercase tracking-widest text-primary/50 font-semibold w-fit shrink-0 text-left">
+                    Construction
                   </span>
                   <div className="flex gap-1.5">
                     {constructionSocials.map(({ href, Icon, label }) => (
