@@ -173,12 +173,12 @@ export default function ConstructionPage() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-          className="relative z-10 mx-auto w-full max-w-6xl pt-28 pb-12"
+          className="relative z-10 mx-auto w-full max-w-6xl px-5 pt-28 pb-12 sm:px-8"
         >
           <h1 className="mb-4 text-type-hero-mega font-bold leading-[1.05] text-white uppercase">
             Architecture <br />& Construction
           </h1>
-          <p className="max-w-7xl text-type-prose-sm leading-relaxed text-white/50">
+            <p className="max-w-sm text-type-prose-sm leading-relaxed text-white/50">
             Projects delivered with technical discipline, strong materials, and clear execution.
           </p>
         </motion.div>

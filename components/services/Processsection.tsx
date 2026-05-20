@@ -39,7 +39,7 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
         delay: index * 0.13,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="relative flex flex-col"
+      className="relative flex flex-col overflow-hidden"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -51,20 +51,20 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
       />
 
       {/* Card body */}
-      <div className="relative flex flex-col h-full pt-8 pb-8 pr-6">
+      <div className="relative flex flex-col h-full pt-8 pb-8 pr-8">
         {/* Ghost numeral */}
         <span
           aria-hidden
           className="absolute top-2 right-3 select-none font-bold leading-none pointer-events-none"
           style={{
-            fontSize: "clamp(56px, 6vw, 80px)",
+            fontSize: "clamp(40px, 6vw, 80px)",
             color: hovered ? "rgba(0,95,117,0.12)" : "rgba(0,95,117,0.07)",
             transition: "color 0.35s ease",
             lineHeight: 1,
           }}
         >
           {step.num}
-        </span>
+          </span>
 
         {/* Step pill */}
         <div className="mb-6 w-fit">
@@ -127,7 +127,7 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
 
 export default function ProcessSection() {
   return (
-    <section className="relative overflow-hidden bg-background max-w-6xl mx-auto py-12 sm:py-14">
+    <section className="landing-section bg-background">
       {/* Soft radial tint */}
       <div
         aria-hidden
@@ -138,26 +138,18 @@ export default function ProcessSection() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto">
-        <div className="relative">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute hidden sm:block"
-          />
+      <div className="landing-container">
+        <div className="mb-10 sm:mb-12">
+          <h2 className="font-heading text-type-h2 text-foreground max-w-2xl uppercase text-left">
+            OUR WORKFLOW
+          </h2>
+          <div className="landing-rule mt-4" />
+        </div>
 
-          <div className="mb-10 sm:mb-12">
-              <h2 className="font-heading text-type-h2 text-foreground max-w-2xl uppercase">
-                OUR WORKFLOW
-              </h2>
-              <div className="landing-rule mt-4" />
-            </div>
-
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 lg:gap-6">
-            {steps.map((step, index) => (
-              <StepCard key={step.num} step={step} index={index} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+          {steps.map((step, index) => (
+            <StepCard key={step.num} step={step} index={index} />
+          ))}
         </div>
       </div>
     </section>

@@ -99,17 +99,17 @@ export default function DepartmentContactStrip({
     <section
       className={
         isInterior
-          ? "bg-subtle border-y border-foreground/5"
-          : "bg-foreground/3 border-y border-foreground/5"
+          ? "landing-section bg-subtle border-y border-foreground/5"
+          : "landing-section bg-foreground/3 border-y border-foreground/5"
       }
     >
-      <div className="max-w-6xl mx-auto py-12 sm:py-14">
-        <h2 className="font-heading text-type-h2 text-foreground max-w-2xl uppercase">
+      <div className="landing-container">
+        <h2 className="font-heading text-type-h2 text-foreground max-w-2xl uppercase text-left">
           Connect with us
         </h2>
         <div className="landing-rule mb-6" />
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          <div className="space-y-3 text-type-prose text-foreground/85">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+          <div className="space-y-3 text-type-prose text-foreground/85 text-left">
             <a
               href={`tel:${ZAG_PHONE_TEL}`}
               className="flex items-start gap-3 group"
