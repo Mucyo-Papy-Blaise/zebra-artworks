@@ -102,21 +102,21 @@ export default function Footer() {
             <div className="flex flex-col gap-7">
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-10">
                 <div className="flex items-start gap-2 text-xs text-white/40">
-                  <MapPin className="size-3.5 shrink-0 mt-0.5 text-primary/50" />
+                  <MapPin className="size-3.5 shrink-0 mt-0.5 text-primary" />
                   <span>{ZAG_ADDRESS}</span>
                 </div>
                 <Link
                   href={`tel:${ZAG_PHONE_TEL}`}
                   className="flex items-center gap-2 text-xs text-white/40 hover:text-primary transition-colors duration-200"
                 >
-                  <Phone className="size-3.5 shrink-0 text-primary/50" />
+                  <Phone className="size-3.5 shrink-0 text-primary" />
                   <span>{ZAG_PHONE_DISPLAY}</span>
                 </Link>
                 <Link
                   href={`mailto:${ZAG_EMAIL}`}
                   className="flex items-center gap-2 text-xs text-white/40 hover:text-primary transition-colors duration-200"
                 >
-                  <Mail className="size-3.5 shrink-0 text-primary/50" />
+                  <Mail className="size-3.5 shrink-0 text-primary" />
                   <span>{ZAG_EMAIL}</span>
                 </Link>
               </div>
@@ -155,7 +155,8 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={label}
-                        className="flex h-6 w-6 items-center justify-center border border-white/15 text-white/40 transition-all duration-200 hover:border-primary/50 hover:text-primary hover:bg-primary/5"
+                        className="flex h-6 w-6 items-center justify-center border border-white/15 text-white/40 transition-all duration-200 hover:border-primary
+                         hover:text-primary hover:bg-primary/5"
                       >
                         <Icon className="size-2.5" />
                       </Link>
