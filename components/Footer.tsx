@@ -124,8 +124,8 @@ export default function Footer() {
               {/* Socials — directly under contact */}
               <div className="flex flex-col md:flex-row md:gap-8 gap-3 mt-1 justify-start">
                 <div className="flex items-center gap-2">
-                  <span className="text-[0.55rem] uppercase tracking-widest text-primary/50 font-semibold w-fit shrink-0 text-left">
-                    Interior
+                  <span className="text-[0.55rem] uppercase tracking-widest text-primary font-semibold w-fit shrink-0 text-left">
+                    Interior Design
                   </span>
                   <div className="flex gap-1.5">
                     {interiorSocials.map(({ href, Icon, label }) => (
@@ -144,7 +144,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <span className="text-[0.55rem] uppercase tracking-widest text-primary/50 font-semibold w-fit shrink-0 text-left">
+                  <span className="text-[0.55rem] uppercase tracking-widest text-primary font-semibold w-fit shrink-0 text-left">
                     Construction
                   </span>
                   <div className="flex gap-1.5">
