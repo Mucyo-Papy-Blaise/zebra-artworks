@@ -159,7 +159,7 @@ export default function ConstructionPage() {
     <main className="min-h-screen bg-background">
       <section className="relative flex min-h-95 flex-col justify-end overflow-hidden sm:min-h-110">
         <Image
-          src="/construction1.jpg"
+          src="/2.png"
           alt="Construction hero background"
           fill
           priority
