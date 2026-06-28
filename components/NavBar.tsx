@@ -225,6 +225,13 @@ export default function Navbar() {
     return () => clearTimeout(t);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Maintenance banner */}

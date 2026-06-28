@@ -104,7 +104,7 @@ export default function AboutPage() {
   return (
     <main className="bg-subtle">
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="relative flex min-h-95 flex-col justify-end overflow-hidden sm:min-h-110">
+      <section className="relative flex min-h-[70vh] flex-col justify-end overflow-hidden sm:min-h-[95vh]">
         <Image
           src="/construction1.jpg"
           alt="Construction hero background"
@@ -114,7 +114,7 @@ export default function AboutPage() {
           className="object-cover object-center"
           style={{ filter: "brightness(0.35)" }}
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -143,9 +143,9 @@ export default function AboutPage() {
       {/* ── Stats strip ───────────────────────────────────────────────────── */}
       <section className="bg-background border-y border-line/20">
           <div className={container}>
-            <div className="flex flex-row items-center justify-between py-6 px-2 gap-6">
+            <div className="flex flex-wrap items-center justify-center py-6 px-2 gap-6">
               {stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col items-center">
+                <div key={stat.label} className="flex flex-col items-center min-w-[6rem]">
                   <span className="mb-2 text-type-h3 sm:text-type-h2 font-black leading-none text-primary">
                     {stat.value}
                   </span>
@@ -164,19 +164,19 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image */}
             <div className="relative">
-              <div className="relative h-105 sm:h-125 overflow-hidden">
+              <div className="relative w-full overflow-hidden h-[26rem] sm:h-[34rem]">
                 <Image
                   src="/who-we-are.JPG"
                   alt="Our story"
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
             </div>
 
             {/* Text */}
-            <div>
+            <div className="min-w-0">
               <p className="landing-eyebrow">Our story</p>
               <h2 className="mb-6 text-foreground">Who We Are</h2>
               <div className="space-y-4 text-type-prose-sm leading-relaxed text-gray-mid">
@@ -261,7 +261,7 @@ export default function AboutPage() {
             fill
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/70 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
         </div>
         <div className={`relative z-10 ${container}`}>
           <div className="max-w-2xl">
@@ -348,7 +348,7 @@ export default function AboutPage() {
           <div className={container}>
             <div className="grid lg:grid-cols-[1fr_1.6fr] gap-12 lg:gap-20 items-start">
               {/* Left copy */}
-              <div>
+              <div className="min-w-0">
                 <p className="landing-eyebrow">Resources</p>
                 <h2 className="mb-4 text-foreground">Company Resources</h2>
                 <p className="text-type-prose-sm leading-relaxed text-gray-mid">
@@ -371,13 +371,13 @@ export default function AboutPage() {
               </div>
 
               {/* Download cards */}
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2 min-w-0 w-full">
                 {loadingResources ? (
                   <>
                     {[1, 2].map((i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-3 border border-primary/15 bg-background px-4 py-3 animate-pulse"
+                        className="flex items-center gap-3 border border-primary/15 bg-background px-4 py-3 animate-pulse w-full min-w-0"
                       >
                         <div className="h-9 w-9 shrink-0 bg-subtle" />
                         <div className="flex-1 space-y-2">
@@ -398,7 +398,7 @@ export default function AboutPage() {
                     return (
                       <div
                         key={res.id}
-                        className="group flex items-center gap-3 border border-primary/15 bg-background px-4 py-3 transition-all duration-200 hover:border-primary/40 hover:bg-primary/[0.02]"
+                        className="group flex items-center gap-3 border border-primary/15 bg-background px-4 py-3 transition-all duration-200 hover:border-primary/40 hover:bg-primary/[0.02] w-full min-w-0"
                       >
                         {isPdf ? (
                           <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-red-600/90">
@@ -487,7 +487,7 @@ export default function AboutPage() {
 
       {activeResource && (
         <div
-          className="fixed inset-0 z-1000 flex items-center justify-center bg-black/70 px-4 py-8 backdrop-blur-[2px]"
+          className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/70 px-4 py-8 backdrop-blur-[2px]"
           onClick={(event) => {
             if (event.target === event.currentTarget) {
               setActiveResource(null);
