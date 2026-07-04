@@ -234,11 +234,6 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Maintenance banner */}
-      <div className="bg-orange-500 py-1.5 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-white">
-        Website Under Maintenance — Services Remain Available
-      </div>
-
       {/* Main navbar */}
       <div
         className={`transition-all duration-100 ease-in-out py-1 mt-2 ${
